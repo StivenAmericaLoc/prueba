@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<faces-config version="2.3"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd">
+    <application>
+        <el-resolver>com.stiven.prueba.controller.util.JsfCrudELResolver</el-resolver>
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>welcome</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>departamentos</managed-bean-name>
+        <managed-bean-class>com.stiven.prueba.controller.DepartamentosController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>departamentosJpa</managed-bean-name>
+        <managed-bean-class>com.stiven.prueba.controller.DepartamentosFacade</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <converter>
+        <converter-for-class>com.stiven.prueba.modelo.Departamentos</converter-for-class>
+        <converter-class>com.stiven.prueba.controller.DepartamentosConverter</converter-class>
+    </converter>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>departamentos_create</from-outcome>
+            <to-view-id>/departamentos/New.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>departamentos_list</from-outcome>
+            <to-view-id>/departamentos/List.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>departamentos_edit</from-outcome>
+            <to-view-id>/departamentos/Edit.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>departamentos_detail</from-outcome>
+            <to-view-id>/departamentos/Detail.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>empleados</managed-bean-name>
+        <managed-bean-class>com.stiven.prueba.controller.EmpleadosController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>empleadosJpa</managed-bean-name>
+        <managed-bean-class>com.stiven.prueba.controller.EmpleadosFacade</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <converter>
+        <converter-for-class>com.stiven.prueba.modelo.Empleados</converter-for-class>
+        <converter-class>com.stiven.prueba.controller.EmpleadosConverter</converter-class>
+    </converter>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>empleados_create</from-outcome>
+            <to-view-id>/empleados/New.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>empleados_list</from-outcome>
+            <to-view-id>/empleados/List.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>empleados_edit</from-outcome>
+            <to-view-id>/empleados/Edit.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>empleados_detail</from-outcome>
+            <to-view-id>/empleados/Detail.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

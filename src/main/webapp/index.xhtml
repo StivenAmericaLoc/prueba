@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+    </h:head>
+    <h:body>
+        <p:inputText value="#{bean.value}" pt:placeholder="Watermark here"/>
+        <h:form>
+            <h:commandLink action="#{departamentos.listSetup}" value="Show All Departamentos Items"/>
+        </h:form>
+        <h:form>
+            <h:commandLink action="#{empleados.listSetup}" value="Show All Empleados Items"/>
+        </h:form>
+    </h:body>
+
+
+</html>

@@ -1,0 +1,5 @@
+com\stiven\prueba\JAXRSConfiguration.class
+com\stiven\prueba\bean\departamentoBean.class
+com\stiven\prueba\modelo\Empleados.class
+com\stiven\prueba\modelo\Departamentos.class
+com\stiven\prueba\resources\JavaEE8Resource.class
